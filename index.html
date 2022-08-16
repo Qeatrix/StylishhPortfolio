@@ -97,28 +97,7 @@
     </div>
     <div id="status"></div>
 </body>
-
-    <!-- <script>
-    window.addEventListener('wheel', function(event)
-    {
-     if (event.deltaY < 0)
-     {
-      console.log('scrolling up');
-      document.getElementById('status').textContent= 'scrolling up';
-      welcomescreen_frame.style.translate = '0 0';
-      welcomescreen_frame.style.transition = 'translate 0.5s';
-     }
-     else if (event.deltaY > 0)
-     {
-      console.log('scrolling down');
-      document.getElementById('status').textContent= 'scrolling down';
-      welcomescreen_frame.style.translate = '0 -100%';
-      welcomescreen_frame.style.transition = 'translate 0.5s';
-     }
-    });
-    </script> -->
     <script>
-
         function adapt() {
             var project_names = document.querySelectorAll('.project_name');
 
@@ -141,7 +120,5 @@
         
         adapt();
         window.addEventListener('resize', adapt);
-
-        
     </script>
 </html>
