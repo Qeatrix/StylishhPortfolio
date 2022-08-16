@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="description" content="Stylishh's Portfolio" />
-    <meta name="keywords" content="Roblox, RobloxDev, Roblox Develop, Stylishh, StylishhRBLX, Twitter, Portfolio" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Stylishh's Portfolio</title>
+    <meta name="description" content="Stylishh's Portfolio">
+    <meta name="keywords" content="Roblox, RobloxDev, Roblox Develop, Stylishh, StylishhRBLX, Twitter, Portfolio">
+    <link rel="icon" type="image/gif" href="img/Site_Logo.svg">
     <link rel="stylesheet" href="css/aboutme.css">
     <link rel="stylesheet" href="css/left-nav-style.css">
 </head>
@@ -40,23 +40,18 @@
         </div>
     </div>
 </body>
+    <script>
+        function adapt() {
+            var object = document.getElementById('avatar');
 
-<script>
-
-    function adapt() {
-        var object = document.getElementById('avatar');
-
-        if (window.innerWidth > 650) {
-            object.style.marginTop = '50px';
-        } else {
-            object.style.marginTop = '250px';
+            if (window.innerWidth > 650) {
+                object.style.marginTop = '50px';
+            } else {
+                object.style.marginTop = '250px';
+            };
         };
-    };
-    
-    adapt();
-    window.addEventListener('resize', adapt);
 
-    
-</script>
-
+        adapt();
+        window.addEventListener('resize', adapt);
+    </script>
 </html>
