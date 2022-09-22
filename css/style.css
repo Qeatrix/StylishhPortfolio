@@ -41,7 +41,7 @@ body {
 .background {
     position: absolute;
     object-fit: cover;
-    background: url(../img/MainScreen_Background.png);
+    background: url(../img/MainScreen_Background.avif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
