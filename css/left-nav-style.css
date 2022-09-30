@@ -22,13 +22,13 @@
     padding: 0.4em;
     padding-right: 0.5em;
     padding-left: 0.5em;
-    padding-bottom: 0.6em;
+    padding-bottom: 0.5em;
     background: inherit;
     color: #dadada;
     cursor: pointer;
     border-radius: 8px;
     font-size: 1.2em;
-    line-height: 1;
+    line-height: 0.75;
     z-index: 5;
     -webkit-transition: color .25s ease-in-out;
     -moz-transition: color .25s ease-in-out;
