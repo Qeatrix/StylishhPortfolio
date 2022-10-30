@@ -125,6 +125,38 @@ body {
 .image:hover {
     scale: 1.1;
     transition: scale, 0.4s;
+    cursor: pointer;
+}
+
+.image_preview {
+    position: fixed;
+    object-fit: cover;
+    min-width: 200px;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    margin: 0;
+    opacity: 0;
+    scale: 0.8;
+} 
+
+.image_close {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    opacity: 0;
+}
+
+.preview_container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background: rgba(0.2, 0.2, 0.2, 0.7);
 }
 
 .aboutme_container {

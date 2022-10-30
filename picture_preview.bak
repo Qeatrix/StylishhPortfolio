@@ -1,0 +1,123 @@
+const divs = document.querySelectorAll('.image');
+
+divs.forEach(el => el.addEventListener('click', event => {
+	let source_image = el.getBoundingClientRect();
+	
+	let preview_image = document.createElement('img');
+	preview_image.className = 'image_preview';
+
+	preview_image.style.position = 'fixed';
+	
+	preview_image.height = source_image.height;
+	preview_image.width = source_image.width;
+	
+	preview_image.style.top = 'calc(' + source_image.top + window.pageYOffset + 'px + 17%)'; 
+	preview_image.style.right = source_image.right + window.pageXOffset + 'px'; 
+	preview_image.style.bottom = source_image.bottom + window.pageXOffset + 'px'; 
+	preview_image.style.left = source_image.left + window.pageYOffset + 200  + 'px'; 
+	let inset = preview_image.style.top + ' ' + preview_image.style.right + ' ' + preview_image.style.bottom + ' ' + preview_image.style.left;
+	let inset_string = String(inset);
+
+	preview_image.src = el.src;
+	
+
+	document.body.append(preview_image);
+/*
+	preview_image.style.top = '50%';
+	preview_image.style.right = '0';
+	preview_image.style.left = '50%';
+	preview_image.style.bottom = '0';
+	
+	preview_image.style.height = '85%';
+	preview_image.style.width = '85%';
+	preview_image.style.transform = 'translate(-50%, -50%)';
+	*/
+
+	function makeEaseOut(timing) {
+		return function(timeFraction) {
+			        return 1 - timing(1 - timeFraction);
+			      
+		}
+		    
+	}
+
+	function bounce(timeFraction) {
+		for (let a = 0, b = 1; 1; a += b, b /= 2) {
+			if (timeFraction >= (7 - 4 * a) / 11) {
+				          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+				        
+			}
+			      
+		}
+		    
+	}
+
+	function quad(timeFraction) {
+		      return Math.pow(timeFraction, 2);
+		    
+	}
+/*
+	let animateRequest = function AM() {
+			preview_image.style.transform = 'translate(-50%, -50%)';
+			window.requestAnimationFrame(AM);
+
+	} */
+	let animateRequest1 = function() {
+			preview_image.style.height = '85%';
+			window.requestAnimationFrame(animateRequest1);
+
+	}	
+/*
+	let animateRequest2 = function AM2() {
+			preview_image.style.width = '85%';	       
+			window.requestAnimationFrame(AM2);
+
+	}
+	
+	let animateRequest3 = function AM3() {
+			preview_image.style.top = '50%';	       
+			window.requestAnimationFrame(AM3);
+
+	}
+
+	let animateRequest4 = function AM4() {
+			preview_image.style.left = '50%';
+			window.requestAnimationFrame(AM4);
+
+	}
+		*/	
+	animateRequest1(); /*
+	animateRequest1();
+	animateRequest2();
+	animateRequest3();
+	animateRequest4();
+	*/
+/*	
+	animate({
+		duration: 2000,
+		timing: makeEaseOut(quad),
+		draw: function(progress) {
+			preview_image.style.transform = 'translateY(-50%)';	        
+		}      
+	});
+
+	animate({
+		duration: 2000,
+		timing: makeEaseOut(quad),
+		draw: function(progress) {
+			preview_image.style.transform = 'translateX(-50%)';	        
+		}      
+	});
+
+
+	animate({
+		duration: 1000,
+		timing: makeEaseOut(quad), 
+		draw: function(progress) {
+			preview_image.style.inset = '50% 0 0 50%';	        
+		}      
+	});
+	*/	
+	console.log(source_image.top + window.pageYOffset);
+	console.log(el.src);
+}));
