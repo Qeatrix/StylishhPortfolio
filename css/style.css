@@ -61,24 +61,23 @@ body {
 }
 
 .portfolio_about {
-    display: block;
-    height: 22.5px;
-    width: max-content;
-    position: relative;
-    top: calc(98% - 160px);
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    margin-bottom: 10px;
-    padding: 0 7px;
-    padding-bottom: 28px;
-    font-size: 1.5em;
-    font-weight: 600;
-    text-align: center;
-    background-color: white;
-    color: rgb(24, 24, 24);
-    border-radius: 10px;
+  display: block;
+  height: 35px;
+  width: max-content;
+  position: relative;
+  top: calc(98% - 160px);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 0 7px 28px;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  background-color: white;
+  color: rgb(24, 24, 24);
+  border-radius: 10px;
 }
 
 .container {
@@ -189,11 +188,13 @@ body {
 }
 
 .video_close_text {
-	margin-left: 25px;
-	padding: 6px;	
+	margin-left: 30px;
 	font-size: 0.9em;
 	inline-size: 122px;
+  line-height: 30px;
 	font-weight: 600;
+  text-align: center;
+  width: calc(100% - 35px);
 }
 
 .preview_container {
