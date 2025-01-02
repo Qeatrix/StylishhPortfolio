@@ -82,16 +82,16 @@ function openMenuOld() {
         gsap.fromTo('#nav_toggle-button', 0.1,
           {css: {opacity: '0'}},
           {css: {opacity: '1'}, ease: Power1.easeInOut, delay: 0.25});
-        
+
         gsap.fromTo('.nav', 0.5,
           {css: {opacity: 1}},
-          {css: {opacity: 0}, ease: Power1.easeInOut, delay: 0.4});      
+          {css: {opacity: 0}, ease: Power1.easeInOut, delay: 0.4});
 
         isAvailable = false;
 
         if (debug == true) {
           console.log('isAvailable = false');
-        } 
+        }
 
         setTimeout(function () {
           menu_logo.style.display = 'flex';
@@ -119,12 +119,12 @@ function openMenuOld() {
         gsap.fromTo('.nav_show-icon', 0.2,
             {css: {opacity: '1'}},
             {css: {opacity: '0'}, ease: Power1.easeInOut});
-      
+
         isAvailable = false
 
         if (debug == true) {
           console.log('isAvailable = false');
-        } 
+        }
 
         setTimeout(function () {
           menu_logo.style.display = 'none';
@@ -133,7 +133,7 @@ function openMenuOld() {
 
           if (debug == true) {
             console.log(isAvailable);
-          } 
+          }
 
         }, 400);
       };
@@ -194,7 +194,7 @@ function animateObjects(Trigger, ProjectName, ProjectDate, ProjectDescr) {
 
 function translateIDs() {
   var arr = document.querySelectorAll('[id^="the"]');
-  
+
   for (i = 0; i < arr.length; i++) {
         animateObjects(arr[i], arr[i + 1], arr[i + 2], arr[i + 3]);
         i = i + 3
@@ -204,4 +204,3 @@ function translateIDs() {
 translateIDs();
 startAnim();
 // openMenuOld();
-
