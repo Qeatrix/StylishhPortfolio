@@ -75,8 +75,7 @@ html, body {
 .social_container {
   display: flex;
   height: 130px;
-  width: 100%;
-  max-width: 540px;
+  width: fit-content;
   position: relative;
   margin: auto;
   margin-top: 75px;
@@ -90,6 +89,10 @@ html, body {
 }
 
 .social_container_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   height: 100px;
   width: 110px;
   margin: 15px 10px;
@@ -103,14 +106,14 @@ html, body {
 .social_container_section:hover {
   background: rgb(238, 238, 238);
   scale: 1.075;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 30px; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 30px;
 
   transition: all 0.5s;
 }
 
 .social_container_section > img {
   height: 30px;
-  width: 100%;
+  /* width: 100%; */
   margin: 20px 0 7px 0;
 }
 
@@ -167,7 +170,7 @@ html, body {
 @media (min-width: 650px) {
   .social_container {
     height: 130px;
-    width: 100%;
+    width: fit-content;
   }
 }
 
@@ -195,7 +198,7 @@ html, body {
   .info_container {
     top: calc(58% - 225px);
   }
-  
+
   .social_container {
     height: 230px;
     width: 255px;
@@ -234,5 +237,13 @@ html, body {
   .social_container {
     top: calc(58% - 275px);
     scale: 0.8;
+  }
+}
+
+
+@media (max-width: 670px) {
+  .social_container {
+    max-width: 410px;
+    height: fit-content;
   }
 }
